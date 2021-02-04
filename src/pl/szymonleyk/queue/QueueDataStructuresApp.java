@@ -2,6 +2,7 @@ package pl.szymonleyk.queue;
 
 import pl.szymonleyk.stack.Book;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class QueueDataStructuresApp {
@@ -20,22 +21,25 @@ public class QueueDataStructuresApp {
             option = scanner.nextInt();
             scanner.nextLine(); // \n
 
-            Book book;
+            Person person;
             switch (option) {
                 case 1:
                     System.out.println(personQueue.empty());
                     break;
                 case 2:
-                    Person person = personQueue.front();
+                    person = personQueue.front();
                     if(person != null) {
                         System.out.println(person);
                     }
                     break;
                 case 3:
-
+                    System.out.println("Name: ");
+                    String name = scanner.nextLine();
+                    person = new Person(name);
+                    personQueue.push(person);
                     break;
                 case 4:
-
+                    personQueue.pop();
                     break;
             }
         } while(option != 0);

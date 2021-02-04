@@ -15,4 +15,25 @@ public class PersonQueue {
         }
         return null;
     }
+
+    public void push(Person person){
+        if(qcnt != persons.length){
+            int i = qptr + qcnt;
+            if(i >= persons.length){
+                i -= persons.length;
+            }
+            persons[i] = person;
+            qcnt++;
+        }
+    }
+
+    public void pop(){
+        if(!empty()){
+            qcnt--;
+            qptr++;
+            if(qptr == persons.length){
+                qptr = 0;
+            }
+        }
+    }
 }
