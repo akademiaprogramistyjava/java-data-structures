@@ -26,7 +26,10 @@ public class QueueDataStructuresApp {
                     System.out.println(personQueue.empty());
                     break;
                 case 2:
-
+                    Person person = personQueue.front();
+                    if(person != null) {
+                        System.out.println(person);
+                    }
                     break;
                 case 3:
 

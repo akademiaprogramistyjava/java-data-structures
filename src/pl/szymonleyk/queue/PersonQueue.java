@@ -8,4 +8,11 @@ public class PersonQueue {
     public boolean empty(){
         return qcnt == 0;
     }
+
+    public Person front(){
+        if(!empty()){
+            return persons[qptr];
+        }
+        return null;
+    }
 }
