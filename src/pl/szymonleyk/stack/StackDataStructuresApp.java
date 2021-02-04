@@ -1,7 +1,8 @@
-import java.sql.SQLOutput;
+package pl.szymonleyk.stack;
+
 import java.util.Scanner;
 
-public class DataStructuresApp {
+public class StackDataStructuresApp {
     public static void main(String[] args) {
         BookStack bookStack = new BookStack();
         Scanner scanner = new Scanner(System.in, "UTF-8");
