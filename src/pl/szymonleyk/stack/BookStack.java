@@ -1,3 +1,5 @@
+package pl.szymonleyk.stack;
+
 public class BookStack {
     private Book[] books = new Book[10];
     private int sptr = 0;
